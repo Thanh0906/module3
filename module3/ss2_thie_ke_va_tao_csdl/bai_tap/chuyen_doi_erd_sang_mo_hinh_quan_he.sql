@@ -10,9 +10,9 @@ ma_vt INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 ten_vt VARCHAR(60) NOT NULL
 );
 CREATE TABLE chi_tiet_phieu_xuat(
-so_px INT NOT NULL,
-ma_vt INT NOT NULL,
-UNIQUE (so_px , ma_vt),
+so_px INT ,
+ma_vt INT ,
+PRIMARY KEY (so_px , ma_vt),
 dg_xuat DOUBLE NOT NULL,
 sl_xuat INT NOT NULL,
 FOREIGN KEY (so_px) REFERENCES phieu_xuat (so_px),
@@ -23,9 +23,9 @@ so_pn INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 ngay_nhap DATE
 );
 CREATE TABLE chi_tiet_phieu_nhap(
-ma_vt INT NOT NULL,
-so_pn INT NOT NULL,
-UNIQUE(ma_vt,so_pn),
+ma_vt INT,
+so_pn INT ,
+PRIMARY KEY(ma_vt,so_pn),
 dg_nhap DOUBLE NOT NULL,
 sl_nhap INT NOT NULL,
 FOREIGN KEY(so_pn) REFERENCES phieu_nhap(so_pn),
@@ -36,9 +36,9 @@ so_dh INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 ngay_dh DATETIME
 );
 CREATE TABLE chi_tiet_don_dat_hang(
-ma_vt INT NOT NULL,
-so_dh INT  NOT NULL,
-UNIQUE(ma_vt,so_dh),
+ma_vt INT,
+so_dh INT ,
+PRIMARY KEY(ma_vt,so_dh),
 FOREIGN KEY(ma_vt) REFERENCES vat_tu(ma_vt),
 FOREIGN KEY (so_dh) REFERENCES don_dh(so_dh)
 );
@@ -49,9 +49,9 @@ dia_chi VARCHAR(50) NOT NULL,
 sdt VARCHAR(10) NOT NULL
 );
 CREATE TABLE cung_cap(
-so_dh INT NOT NULL,
-ma_ncc INT NOT NULL,
-UNIQUE(so_dh,ma_ncc),
+so_dh INT,
+ma_ncc INT,
+PRIMARY KEY(so_dh,ma_ncc),
 FOREIGN KEY(so_dh) REFERENCES don_dh(so_dh),
 FOREIGN KEY (ma_ncc) REFERENCES nhacc(ma_ncc)
 );
