@@ -228,12 +228,9 @@ VALUES
 -- 2.	Hiển thị thông tin của tất cả nhân viên có trong hệ thống có tên bắt đầu là một trong các ký tự “H”, “T” hoặc “K” và có tối đa 15 ký tự.
 select*
 from nhan_vien
-where(
-substr(ho_ten,7) like '%h%'
-or substr(ho_ten,7) like '%T%'
-or substr(ho_ten,7) like '%K%'
-and char_length(ho_ten)<=15
-);
+where  char_length(ho_ten)<=15 and  
+    ((select substring_index(ho_ten,' ',-1)) regexp '^T|K|H');
+    
 -- 3.	Hiển thị thông tin của tất cả khách hàng có độ tuổi từ 18 
 -- đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”.
  
@@ -281,7 +278,7 @@ group by kh.id_khach_hang;
  /* 6.	Hiển thị IDDichvu, tenDichVu, DienTich, ChiphiThue, tenLoaidichVu 
  của tất cả Các loại Dịch vụ chưa Từng ĐƯợc Khách hàng thựC hiệN đặt từ quý 1 Của Năm 2019 (Quý 1 lÀ tháNG 1, 2, 3).
 */
-seleCt dv.id_dich_vu,dv.tEn_dich_vu,dV.chi_PHI_thue,ldv.ten_loai_Dich_Vu
+select dv.id_dich_vu,dv.tEn_dich_vu,dV.chi_PHI_thue,ldv.ten_loai_Dich_Vu
 from dich_vu dv 
 left join loai_dich_VU ldv on dv.id_loai_dich_vu =lDV.id_lOai_dich_vu
 left Join hop_dong hd oN HD.id_dich_vu = dv.id_dich_VU
@@ -456,7 +453,7 @@ from(
 	join hop_dong hd on nv.id_nhan_vien = hd.id_nhan_vien
         where year(hd.ngay_lam_hop_dong) between 2017 and 2019
         group by nv.id_nhan_vien
-        having count(hd.id_hop_dong) > 0) as dalete);
+        having count(hd.id_hop_dong) > 0) as xoa );
 set SQL_SAFE_UPDATES =1;
 select * from nhan_vien;
 
@@ -488,7 +485,6 @@ select * from nhan_vien;
 
 
 -- Task 18: Xóa những khách hàng có hợp đồng trước năm 2016 (chú ý ràng buộc giữa các bảng).
-
 set sql_safe_updates = 0;
 delete from khach_hang 
 where id_khach_hang in (
@@ -517,7 +513,7 @@ from(
             hop_dong hd on hd.id_hop_dong = hdct.id_hop_dong
 	where year(hd.ngay_lam_hop_dong) = 2019
 	group by dvdk.id_dich_vu_di_kem
-	having count(hdct.id_dich_vu_di_kem) > 10) as t);
+	having count(hdct.id_dich_vu_di_kem) > 10) as so_lan_su_dung);
 set sql_safe_updates = 1;
 select* from dich_vu_di_kem;
 /*
@@ -554,6 +550,6 @@ select * from v_nhan_vien;
  */
 set sql_safe_updates = 0;
 update v_nhan_vien
-set dia_chi ='lien chiểu' ;
+set dia_chi ='liên chiểu' ;
 set sql_safe_updates = 1;
 select * from v_nhan_vien;
