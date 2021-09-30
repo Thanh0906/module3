@@ -108,7 +108,7 @@ so_luong int not null
 );
 insert into vi_tri(ten_vi_tri)
 value
-('lễ tân'),('chuyên viên'),('quản lí'),('trưởng phòng'),('giám đốc');
+('lễ tân'),('phục vụ'),('chuyên viên'),('giám sát'),('quản lí'),('giám đốc');
 
 insert into trinh_do(ten_trinh_do)
 value
@@ -116,7 +116,7 @@ value
 
 insert into bo_phan(ten_bo_phan)
 value
-('sale_marketing'),('hành chính'),(' quản lí'),('phục vụ');
+('sale_marketing'),('hành chính'),('phục vụ '),('quản lí');
 
 insert into loai_khach(ten_loai_khach_hang)
 value
@@ -135,14 +135,17 @@ values
 ('massage', '500000', 1, 'Còn chỗ'),
 ('karaoke',' 400000', 1, 'Còn chỗ'),
 ('Thuê xe', '400000', 1, 'Còn chỗ'),
-('Bia', '50000', 1, 'Có thể gọi');
+('Gym', '50000', 1, 'Có thể gọi');
 
 InsERT INTO khach_hang (id_loai_khach, ho_ten, ngay_sinh, so_cmnd, so_dien_thoai, email, dia_chi)
 VALUES
-(1, 'Huỳnh ngọc Thanh', '1990-07-27', '201784567', '0372465456', 'thanhdeptrai@gmail.com', 'Đà Nẵng'),
+(5, 'Huỳnh ngọc Thanh', '1990-07-27', '201784567', '0372465456', 'thanhdeptrai@gmail.com', 'Đà Nẵng'),
 (2, 'Phan đại phước', '1975-04-10', '201570309', '090456785', 'phuonghong@gmail.com', 'Quảng Trị'),
 (3, 'Dương Nhật Sang', '1995-06-12', '202568003', '0903216545', 'sangdien@gmail.com', 'Đà Nẵng'),
-(1, 'nguyễn Văn Công', '1992-06-28', '202003001', '0907851236', 'congvan@gmail.com', 'quảng Trị'),
+(4, 'Trần văn Toàn', '1970-07-27', '223784867', '0372465456', 'toandien@gmail.com', 'Đà Nẵng'),
+(3, 'Phan văn Đại', '1965-04-10', '201450309', '090456785', 'daibangtungcanh@gmail.com', 'Hải châu'),
+(5, 'Dương Văn Đông', '1969-06-12', '221568053', '0903216545', 'dongphuongbatbai@gmail.com', 'Đà Nẵng'),
+(5, 'nguyễn Văn Công', '1992-06-28', '202003001', '0907851236', 'congvan@gmail.com', 'quảng Trị'),
 (1, 'Trần Ngọc Tân', '1985-05-17', '201238740', '0901593575', 'tantutor@gmail.com', 'Vinh'),
 (4, 'Dương Quốc Huy', '1950-01-17', '200358743', '090147852', 'huymt@gmail.com', 'Tp HCM'),
 (1, 'huỳnh Tấn Hoàng', '1974-01-20', '200513678', '0903691235', 'hoangthuong@gmail.com', 'vinh'),
@@ -152,10 +155,17 @@ VALUES
 
 INSErT INTO nhan_vien (ho_ten, id_vi_tri, id_trinh_do, id_bo_phan, ngay_sinh, so_cmnd, luong, so_dien_thoai, email, dia_chi)
 VALUES
+('Nguyễn Văn long', 1, 1, 1, '1990-04-24', '201451309', '15000000', '0931654586', 'huy@gmail.com', 'Quảng Ngãi'),
+('Hồ Quang Bình', 2, 2, 2, '1991-08-17', '200356067', '10000000', '0903221456', 'dong@gmail.com', 'Quảng nam'),
+('Phạm Thị Trang', 3, 3, 2, '1993-02-07', '200457145', '12000000', '0372456789', 'diem@gmail.com', 'Komtum'),
 ('võ Xuan huy', 1, 3, 3, '1990-04-24', '201451309', '15000000', '0931654586', 'huy@gmail.com', 'Quảng Ngãi'),
 ('Dương Văn ĐÔng', 2, 2, 3, '1991-08-17', '200356067', '20000000', '0903221456', 'dong@gmail.com', 'Đà Nẵng'),
-('Vũ Thị Diễm', 3, 3, 4, '1993-02-07', '200457145', '10000000', '0372456789', 'diem@gmail.com', 'Đà Nẵng'),
+('Vũ Thị Diễm', 3, 3, 4, '1993-02-07', '200457145', '10000000', '0372456789', 'diem@gmail.com', 'Hải Châu'),
 ('Trần thị Ánh Nga', 4, 3, 2, '1999-02-14', '200567134', '11000000', '0372452123', 'nga@gmail.com', 'BÌnh Định'),
+('Võ Thái Hòa', 6, 4, 4, '1985-04-24', '201451309', '25000000', '0931654586', 'hoa@gmail.com', 'hà nội'),
+('Dương Văc Bắc', 4, 3, 3, '1991-08-17', '200356067', '20000000', '0903221456', 'bacthanh@gmail.com', 'quảng bình'),
+('Vũ Thị Phương Trinh', 1, 2, 2, '1999-02-07', '222045714', '10000000', '0372456789', 'trinhdepgai@gmail.com', 'Đà Nẵng'),
+('Trần thị Ánh Nguyệt', 1, 2, 1, '2000-02-14', '22167134', '11000000', '0372452123', 'nguyetnga@gmail.com', 'BÌnh Định'),
 ('Nguyễn Đình Thuận', 3, 3, 2, '2000-07-19', '201367212', '13000000', '0372458794', 'thuan@gmail.com', 'Đà Nẵng'),
 ('Võ Thị Cẩm Tiên', 4, 3, 3, '1996-10-24', '201458090', '13000000', '0964583142', 'tien@gmail.com', 'Đà Nẵng'),
 ('Trần Đại Tiến', 2, 2, 4, '1995-05-15', '201450023', '10000000', '090457841', 'daitien@gmail.com', 'Huế'),
@@ -164,29 +174,35 @@ VALUES
 iNSERT INTO dich_vu (ten_dich_vu, dien_tich, so_tang, so_nguoi_toi_da, chi_phi_thue, id_kieu_thue, id_loai_dich_vu, trang_thai)
 VALUeS
 ('Villa 1', 280, 3, 10, 4000000, 1, 1, 'Còn Trống'),
-('Villa 2', 380, 3, 9, 6000000, 2, 1, 'Còn Trống'),
-('Villa 3', 370, 3, 12, 5000000, 3, 1, 'Còn Trống'),
+('Villa 2', 340, 3, 9, 6000000, 2, 1, 'Còn Trống'),
+('Villa 3', 370, 3, 12, 8000000, 3, 1, 'Còn Trống'),
 ('House 1', 250, 2, 6, 3000000, 1, 2, 'còn trống'),
 ('House 2', 260, 2, 6, 2500000, 2, 2, 'Còn Trống'),
 ('House 3', 260, 2, 6, 2500000, 3, 2, 'Còn Trống'),
-('Room 3', 100, 1, 5, 700000, 3, 3, 'còn phòng'),
-('Room 1', 80, 1, 4, 600000, 1, 3, 'còn phòng'),
-('Room 2', 60, 1, 2, 400000, 2, 3, 'còn phòng');
+('Room 1', 100, 1, 5, 700000, 3, 3, 'còn phòng'),
+('Room 2', 80, 1, 4, 600000, 1, 3, 'còn phòng'),
+('Room 3', 60, 1, 2, 400000, 2, 3, 'còn phòng');
 
 inSERT INTO hop_dong (id_nhan_vien, id_khach_hang, id_dich_vu, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc,tong_tien)
 VALueS
-(1, 1, 7, '2021-08-21', '2021-09-21', 2000000,7000000),
-(2, 2, 2, '2019-10-12', '2020-01-18', 3000000,6000000),
-(4, 3, 2, '2020-06-09', '2020-09-09', 2000000,5000000),
-(4, 4, 5, '2021-10-12', '2021-12-12', 3000000,6000000),
+(3, 1, 7, '2016-08-21', '2018-09-21', 2000000,7000000),
+(6, 3, 2, '2015-10-12', '2016-01-18', 3000000,53000000),
+(4, 3, 2, '2017-05-09', '2019-09-09', 2000000,100000000),
+(8, 2, 5, '2019-10-12', '2021-12-12', 3000000,6000000),
+(6, 8, 5, '2020-11-11', '2021-02-02', 4000000,4000000),
+(9, 7, 6, '2019-11-21', '2020-01-21', 3000000,15000000),
+(1, 10, 7, '2021-08-21', '2021-09-21', 2000000,7000000),
+(2, 5, 2, '2019-10-12', '2020-01-18', 3000000,6000000),
+(1, 11, 2, '2020-06-09', '2020-09-09', 2000000,5000000),
+(5, 2, 5, '2021-10-12', '2021-12-12', 3000000,6000000),
 (2, 4, 5, '2020-11-11', '2021-02-02', 4000000,4000000),
-(3, 5, 6, '2019-11-21', '2020-01-21', 3000000,15000000),
+(5, 5, 6, '2019-11-21', '2020-01-21', 3000000,15000000),
 (6, 6, 7, '2020-10-01', '2020-10-31', 2000000,10000000),
 (5, 9, 6, '2020-04-10', '2020-05-10', 2000000,12000000),
-(3, 7, 1, '2019-12-01', '2020-03-10', 3000000,11000000),
+(4, 7, 1, '2019-12-01', '2020-03-10', 3000000,11000000),
 (2, 8, 5, '2019-10-01', '2020-10-31', 1000000,30000000),
-(1, 8, 4, '2018-12-07', '2021-05-27', 1000000,50000000),
-(2, 3, 7, '2019-10-15', '2020-11-28', 2000000,20000000),
+(6, 8, 4, '2019-12-12', '2021-05-27', 1000000,50000000),
+(2, 13, 7, '2019-10-15', '2020-11-28', 2000000,20000000),
 (1, 2, 6, '2018-03-15', '2021-03-27', 3000000,45000000);
 
 InseRt IntO hop_dong_chi_tiet (id_hop_dong, id_dich_vu_di_kem, so_luong)
@@ -196,10 +212,15 @@ VALUES
 (3,3,2),
 (4,1,3),
 (5,4,3),
-(6,1,2),
+(15,2,1),
+(2,1,2),
+(11,3,2),
+(6,1,3),
+(5,4,3),
+(14,1,2),
 (7,3,2),
-(8,4,2),
-(9,2,2),
+(18,4,2),
+(19,2,2),
 (10,2,2),
 (11,1,2),
 (13,2,3);
@@ -216,14 +237,10 @@ and char_length(ho_ten)<=15
 -- 3.	Hiển thị thông tin của tất cả khách hàng có độ tuổi từ 18 
 -- đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”.
  
-SELECT *
-from khach_hang
-WHERE
-    (TimestamPDIFF(yeaR,
-        ngay_sinh,
-        cUrdatE()) BEtwEen 18 aND 50)
-        AND (dia_chi = 'đà nẵng'
-        Or dia_chi = 'quảng trị');
+select *
+ from khach_hang
+ where(year(now())-year(ngay_sinh) between 18 and 50)
+ and(dia_chi ='quảng ngãi' or dia_chi = 'quảng trị' ); 
  
   /*
  Task4: Đếm xem tương ứng với mỗi khách hàng đã từng đặt phòng bao nhiêu lần. Kết quả hiển thị được sắp xếp tăng dần theo số lần 
@@ -299,10 +316,6 @@ join hop_dong hd on hd.id_dich_vu = dv.id_dich_vu
             year(hd.ngay_lam_hop_dong) = 2019)
             group by dv.id_dich_vu;
 
-
-insert into khach_hang(id_loai_khach,ho_ten,ngay_sinh,so_cmnd,so_dien_thoai,email,dia_chi)
-values
-(1,'Huỳnh ngọc Sang','1997-01-06',212145879,0934567852,'sang123@gmail.com','quảng ngãi');
 /* 8.	Hiển thị thông tin HoTenKhachhang có trong hệ thống, với yêu cầu hoThenKhachHang không trùng nhau.
 Học viên sử dụng theo 3 cách khác nhau để thực hiện yêu cầu trên
 */
@@ -391,7 +404,14 @@ having year(hd.ngay_lam_hop_dong) = 2019;
  select hdct.id_dich_vu_di_kem, dvdk.ten_dich_vu_di_kem,count(hdct.id_dich_vu_di_kem) as so_luong_dich_vu_di_kem
  from hop_dong_chi_tiet hdct 
  join dich_vu_di_kem dvdk on hdct.id_dich_vu_di_kem =dvdk.id_dich_vu_di_kem
- group by hdct.id_dich_vu_di_kem;
+ group by hdct.id_dich_vu_di_kem
+ having count(hdct.id_dich_vu_di_kem) >= all (
+    select
+        count(hdct.id_dich_vu_di_kem)
+    from
+        hop_dong_chi_tiet hdct
+    group by hdct.id_dich_vu_di_kem);
+
  
  /*
 14.	hiển thị thông tin tất cả các dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất. 
@@ -440,6 +460,33 @@ from(
 set SQL_SAFE_UPDATES =1;
 select * from nhan_vien;
 
+	/*
+	Task 17: Cập nhật thông tin những khách hàng có TenLoaiKhachHang từ Platinium lên Diamond, chỉ cập nhật những khách hàng đã từng 
+	đặt phòng với tổng Tiền thanh toán trong năm 2019 là lớn hơn 10.000.000 VNĐ.
+	*/
+	set sql_safe_updates = 0;
+	update khach_hang 
+	set id_loai_khach= 4
+	where id_khach_hang in (
+       select id_khach_hang
+	   from(select kh.id_khach_hang
+	            from
+	                khach_hang kh
+	            join loai_khach lk on kh.id_loai_khach = lk.id_loai_khach
+	            join hop_dong hd on kh.id_khach_hang = hd.id_khach_hang
+	            join dich_vu dv on hd.id_dich_vu = dv.id_dich_vu
+	            join hop_dong_chi_tiet hdct on hdct.id_hop_dong = hd.id_hop_dong
+	            join dich_vu_di_kem dvdk on dvdk.id_dich_vu_di_kem = hdct.id_dich_vu_di_kem
+	            where
+	                (lk.ten_loai_khach_hang = 'Platinium')
+						and(year(hd.ngay_lam_hop_dong) = 2019)
+	            group by hd.id_khach_hang
+	            having sum(dv.chi_phi_thue + dvdk.gia * dvdk.don_vi) > 10000000) as a);
+	set sql_safe_updates = 1;
+
+	select*from khach_hang;
+
+
 -- Task 18: Xóa những khách hàng có hợp đồng trước năm 2016 (chú ý ràng buộc giữa các bảng).
 
 set sql_safe_updates = 0;
@@ -454,6 +501,7 @@ where id_khach_hang in (
         year(hd.ngay_lam_hop_dong) < 2016) as a);
 set sql_safe_updates = 1;
 select * from khach_hang;
+
 -- 19.	Cập nhật giá cho các Dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2019 lên gấp đôi.
 set sql_safe_updates = 0;
 update dich_vu_di_kem
@@ -486,4 +534,26 @@ select
     so_dien_thoai,ngay_sinh,dia_chi
 from
     khach_hang;
+/*
+21.	Tạo khung nhìn có tên là V_NHANVIEN để lấy được thông tin của 
+tất cả các nhân viên có địa chỉ là “Hải Châu” và đã từng lập hợp đồng 
+cho 1 hoặc nhiều Khách hàng bất kỳ  với ngày lập hợp đồng là “12/12/2019”
+*/
+create view v_nhan_vien as
+select nv.id_nhan_vien,nv.ho_ten,nv.ngay_sinh,
+        nv.so_dien_thoai,nv.email,nv.dia_chi
+from nhan_vien nv
+join
+        hop_dong hd ON hd.id_nhan_vien = nv.id_nhan_vien
+where nv.dia_chi = 'Hải Châu'
+and hd.ngay_lam_hop_dong = '2019-12-12';
+select * from v_nhan_vien;
 
+ /*22.	Thông qua khung nhìn V_NHANVIEN thực hiện cập nhật địa chỉ thành “Liên Chiểu” 
+ đối với tất cả các Nhân viên được nhìn thấy bởi khung nhìn này.
+ */
+set sql_safe_updates = 0;
+update v_nhan_vien
+set dia_chi ='lien chiểu' ;
+set sql_safe_updates = 1;
+select * from v_nhan_vien;
