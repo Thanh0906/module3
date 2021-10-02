@@ -1,0 +1,22 @@
+body{
+   font-family: Arial;
+    font-size: medium;
+}
+.header{
+    height: 100px;
+    background-color: yellow;
+    text-align: center;
+    padding: 15px;
+}
+ol{ text-align: left;
+    background: forestgreen;
+    padding: 15px;
+}
+.img1{
+    text-align: center;
+    border: 1px;
+}
+p{
+text-align: justify;
+}
+
