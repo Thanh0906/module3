@@ -60,18 +60,17 @@ header ul li:hover ul {
     visibility: visible;
 }
 aside{
-    background-color: wheat;
-    top: 100px;
-    width: 13%;
+    background-color: #CDCDCD;
+    width: 17%;
     height: 100%;
     float: left;
 }
-#aside p {
-    background-color: lightgrey;
-    border: 1px solid ;
-    height: 30px;
-    line-height: 40px;
-    margin: 30px 20px;
+#aside1 p {
+    background-color: ghostwhite;
+    border: 1px solid #CDCDCD;
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 10px;
     text-align: center;
 }
 
@@ -91,10 +90,11 @@ article {
 footer {
     height: 50px;
     width: 100%;
-    background-color: lightblue;
+    background-color: blue;
     clear: both;
 }
 footer p {
+    color: white;
     text-align: center;
     line-height: 50px;
 
