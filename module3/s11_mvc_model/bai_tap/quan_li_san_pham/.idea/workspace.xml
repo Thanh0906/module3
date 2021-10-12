@@ -20,10 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60c4d074-c37e-469b-8f14-d77edf4339d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/error-404.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss12_jdbc_crud/thuc_hanh/quan_li_user_su_dung_jsp_servlet_jdbc_mysql/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss12_jdbc_crud/thuc_hanh/quan_li_user_su_dung_jsp_servlet_jdbc_mysql/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss12_jdbc_crud/thuc_hanh/quan_li_user_su_dung_jsp_servlet_jdbc_mysql/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/product/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/product/delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +160,8 @@
       <option name="presentableId" value="Default" />
       <updated>1633771782363</updated>
       <workItem from="1633771784598" duration="1318000" />
-      <workItem from="1633788806806" duration="2345000" />
+      <workItem from="1633788806806" duration="2939000" />
+      <workItem from="1633856489018" duration="87000" />
     </task>
     <servers />
   </component>
@@ -187,10 +189,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="537" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1633772400262" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1633773093373">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1633856542973">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1633773093373" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1633856542973" />
     <state width="1014" height="208" key="GridCell.Tab.0.bottom" timestamp="1633773111806">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -239,5 +241,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1014" height="208" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1633773111806" />
+    <state x="209" y="23" key="new project wizard" timestamp="1633856555818">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="23" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1633856555818" />
   </component>
 </project>
