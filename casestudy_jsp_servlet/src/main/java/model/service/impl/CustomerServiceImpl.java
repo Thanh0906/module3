@@ -8,16 +8,15 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class CustomerServiceImpl implements ICustomerService {
-    private CustomerRepositoryImpl customerRepository = new CustomerRepositoryImpl();
-
+    CustomerRepositoryImpl customerRepository = new CustomerRepositoryImpl();
     @Override
-    public List<Customer> showCustomer(String search) {
-        return customerRepository.showCustomer(search);
+    public Customer showCustomer(int id) {
+        return customerRepository.showCustomer(id);
     }
 
     @Override
-    public Customer showCustomerById(int id) {
-        return customerRepository.showCustomerById(id);
+    public List<Customer> showListCustomer() {
+        return customerRepository.showListCustomer();
     }
 
     @Override
@@ -26,12 +25,19 @@ public class CustomerServiceImpl implements ICustomerService {
     }
 
     @Override
+    public boolean editCustomer(Customer customer) throws SQLException {
+        return customerRepository.editCustomer(customer);
+    }
+
+    @Override
     public boolean deleteCustomer(int id) throws SQLException {
         return customerRepository.deleteCustomer(id);
     }
 
     @Override
-    public boolean updateCustomer(Customer customer) throws SQLException {
-        return customerRepository.updateCustomer(customer);
+    public List<Customer> searchCustomer(String search) {
+        return customerRepository.searchCustomer(search);
     }
+
+
 }

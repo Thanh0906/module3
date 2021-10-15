@@ -13,11 +13,24 @@ public class Service {
     private double poolArea;
     private int numberOfFloors;
 
-    public Service() {
+    public Service(String name, int area, double cost, int maxPeople, int rentTypeId, int serviceTypeId,
+                   String standardRoom, String descriptionOtherConvenience, double poolArea,
+                   int numberOfFloors) {
+        this.name = name;
+        this.area = area;
+        this.cost = cost;
+        this.maxPeople = maxPeople;
+        this.rentTypeId = rentTypeId;
+        this.serviceTypeId = serviceTypeId;
+        this.standardRoom = standardRoom;
+        this.descriptionOtherConvenience = descriptionOtherConvenience;
+        this.poolArea = poolArea;
+        this.numberOfFloors = numberOfFloors;
     }
 
-    public Service(int id, String name, int area, double cost, int maxPeople, int rentTypeId, int serviceTypeId,
-                   String standardRoom, String descriptionOtherConvenience, double poolArea, int numberOfFloors) {
+    public Service(int id, String name, int area, double cost, int maxPeople, int rentTypeId,
+                   int serviceTypeId, String standardRoom, String descriptionOtherConvenience,
+                   double poolArea, int numberOfFloors) {
         this.id = id;
         this.name = name;
         this.area = area;
@@ -30,6 +43,7 @@ public class Service {
         this.poolArea = poolArea;
         this.numberOfFloors = numberOfFloors;
     }
+
 
     public int getId() {
         return id;

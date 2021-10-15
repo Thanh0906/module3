@@ -7,10 +7,13 @@ import java.util.List;
 
 public interface ICustomerRepository {
 
-    List<Customer> showCustomer (String search);
-    Customer showCustomerById (int id);
+    Customer showCustomer(int id);
+    List<Customer> showListCustomer();
     void insertCustomer (Customer customer) throws SQLException;
+    boolean editCustomer(Customer customer) throws SQLException;
     boolean deleteCustomer (int id) throws SQLException;
-    boolean updateCustomer (Customer customer) throws SQLException;
+    List<Customer> searchCustomer(String search);
+
+
 
 }

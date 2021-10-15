@@ -23,7 +23,7 @@
     <h1 class="text-danger">Create Customer</h1>
 </center>
 <h2>
-    <a href="customerServlet?action=customer"><i class="fas fa-arrow-left"></i> Back to Customer Page</a>
+    <a href="customer"><i class="fas fa-arrow-left"></i> Back to Customer Page</a>
 </h2>
 <h2>
     <a href="/"><i class="fas fa-arrow-left"></i> Back to Home</a>
@@ -34,7 +34,7 @@
     </c:if>
 </p>
 <div align="center">
-    <form method="post">
+    <form action="/customer?action=create" method="post">
 
         <table border="1" cellpadding="5">
             <tr>
