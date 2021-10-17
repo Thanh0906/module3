@@ -1,41 +1,45 @@
 package model.service.impl;
 
 import model.bean.Employee;
+import model.respository.impl.EmployeeRepositoryImpl;
 import model.service.IEmployeeService;
 
 import java.sql.SQLException;
 import java.util.List;
 
 public class EmployeeServiceImpl implements IEmployeeService {
-    EmployeeServiceImpl employeeService =new EmployeeServiceImpl();
+    EmployeeRepositoryImpl employeeRepository = new EmployeeRepositoryImpl();
+
     @Override
-    public Employee showEmployee(int id) {
-        return employeeService.showEmployee(id);
+    public Employee showEmployeeId(int id) {
+        return employeeRepository.showEmployeeId(id);
     }
 
     @Override
-    public List<Employee> showListEmployee() {
-        return employeeService.showListEmployee();
+    public List<Employee> showAllEmployee() {
+        return employeeRepository.showAllEmployee();
     }
 
     @Override
     public void insertEmployee(Employee employee) throws SQLException {
-        employeeService.insertEmployee(employee);
-
+        employeeRepository.insertEmployee(employee);
     }
 
     @Override
-    public boolean editEmployee(Employee employee) throws SQLException {
-        return employeeService.editEmployee(employee);
+    public boolean updateEmployee(Employee employee) throws SQLException {
+        return employeeRepository.updateEmployee(employee);
     }
 
     @Override
-    public boolean deleteEmployee(int id) throws SQLException {
-        return employeeService.deleteEmployee(id);
+    public void deleteEmployee(int id) throws SQLException {
+         employeeRepository.deleteEmployee(id);
     }
 
     @Override
     public List<Employee> searchEmployee(String search) {
-        return employeeService.searchEmployee(search);
+        return employeeRepository.searchEmployee(search);
     }
-}
+
+
+    }
+

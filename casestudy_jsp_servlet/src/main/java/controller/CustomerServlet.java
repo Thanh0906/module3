@@ -38,12 +38,41 @@ public class CustomerServlet extends HttpServlet {
                 case "search":
                     searchCustomer(request, response);
                     break;
+
             }
         } catch (SQLException ex) {
             throw new ServletException(ex);
         }
     }
-
+    private void createNewCustomer(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {
+        String name = request.getParameter("name");
+        String birthday = request.getParameter("birthday");
+        int gender = Integer.parseInt(request.getParameter("gender"));
+        String idCard = request.getParameter("id_card");
+        String phone = request.getParameter("phone");
+        String email = request.getParameter("email");
+        String address = request.getParameter("address");
+        int customerTypeId = Integer.parseInt(request.getParameter("customer_type_id"));
+        Customer customer = new Customer(name, birthday, gender, idCard, phone, email, address, customerTypeId);
+        customerService.insertCustomer(customer);
+        request.setAttribute("message", "Thêm mới thành công");
+        request.getRequestDispatcher("/customer/create.jsp").forward(request, response);
+    }
+    private void editCustomer(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        String birthday = request.getParameter("birthday");
+        int gender = Integer.parseInt(request.getParameter("gender"));
+        String idCard = request.getParameter("id_card");
+        String phone = request.getParameter("phone");
+        String email = request.getParameter("email");
+        String address = request.getParameter("address");
+        int customerTypeId = Integer.parseInt(request.getParameter("customer_type_id"));
+        Customer customer = new Customer(id, name, birthday, gender, idCard, phone, email, address, customerTypeId);
+        customerService.editCustomer(customer);
+        request.setAttribute("message", "Thêm mới Thành công");
+        request.getRequestDispatcher("/customer/edit.jsp").forward(request, response);
+    }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
@@ -63,7 +92,7 @@ public class CustomerServlet extends HttpServlet {
                     deleteCustomer(request, response);
                     break;
                 case "search":
-                    showSearchForm(request, response);
+                    searchCustomer(request,response);
                     break;
                 default:
                     listCustomer(request, response);
@@ -85,20 +114,7 @@ public class CustomerServlet extends HttpServlet {
         request.getRequestDispatcher("customer/create.jsp").forward(request, response);
     }
 
-    private void createNewCustomer(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {
-        String name = request.getParameter("name");
-        String birthday = request.getParameter("birthday");
-        int gender = Integer.parseInt(request.getParameter("gender"));
-        String idCard = request.getParameter("id_card");
-        String phone = request.getParameter("phone");
-        String email = request.getParameter("email");
-        String address = request.getParameter("address");
-        int customerTypeId = Integer.parseInt(request.getParameter("customer_type_id"));
-        Customer customer = new Customer(name, birthday, gender, idCard, phone, email, address, customerTypeId);
-        customerService.insertCustomer(customer);
-        request.setAttribute("message", "Thêm mới thành công");
-        request.getRequestDispatcher("/customer/create.jsp").forward(request, response);
-    }
+
 
     private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {
         int id = Integer.parseInt(request.getParameter("id"));
@@ -115,25 +131,10 @@ public class CustomerServlet extends HttpServlet {
         request.getRequestDispatcher("/customer/edit.jsp").forward(request, response);
     }
 
-    private void editCustomer(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {
-        int id = Integer.parseInt(request.getParameter("id"));
-        String name = request.getParameter("name");
-        String birthday = request.getParameter("birthday");
-        int gender = Integer.parseInt(request.getParameter("gender"));
-        String idCard = request.getParameter("id_card");
-        String phone = request.getParameter("phone");
-        String email = request.getParameter("email");
-        String address = request.getParameter("address");
-        int customerTypeId = Integer.parseInt(request.getParameter("customer_type_id"));
-        Customer customer = new Customer(id, name, birthday, gender, idCard, phone, email, address, customerTypeId);
-        customerService.editCustomer(customer);
-        request.setAttribute("message", "Thêm mới Thành công");
-        request.getRequestDispatcher("/customer/edit.jsp").forward(request, response);
-    }
+
 
     private void showSearchForm(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {
         String search = request.getParameter("search");
-        HttpSession session = request.getSession();
         request.setAttribute("search", search);
         request.getRequestDispatcher("/customer/search.jsp").forward(request, response);
     }
@@ -151,8 +152,6 @@ public class CustomerServlet extends HttpServlet {
             dispatcher = request.getRequestDispatcher("/customer/search-result.jsp");
             dispatcher.forward(request, response);
         }
-
-
     }
 }
 

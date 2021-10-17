@@ -88,7 +88,6 @@ public class ServiceServlet extends HttpServlet {
     }
 
     private void showCreateForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("serviceList", serviceService.showAllService());
         request.getRequestDispatcher("service/create.jsp").forward(request, response);
 
     }

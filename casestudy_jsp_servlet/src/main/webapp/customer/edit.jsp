@@ -15,10 +15,10 @@
     <h1 class="text-primary">Edit Customer</h1>
 </center>
 <h2>
-    <a href="customer"><i class="fas fa-arrow-left"></i> Back to Customer Page</a>
+    <a href="/customer"><i class="fas fa-arrow-left"></i> Back to Customer Page</a>
 </h2>
 <h2>
-    <a href="/home/home.jsp"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <a href="/"><i class="fas fa-arrow-left"></i> Back to Home</a>
 </h2>
 <h1 class="text-center">
     <c:if test='${requestScope["message"] != null}'>

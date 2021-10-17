@@ -10,7 +10,14 @@ public class Contract {
     private int customerId;
     private int serviceId;
 
-    public Contract() {
+    public Contract(String startDate, String endDate, double deposit, double totalMoney, int employeeId, int customerId, int serviceId) {
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.deposit = deposit;
+        this.totalMoney = totalMoney;
+        this.employeeId = employeeId;
+        this.customerId = customerId;
+        this.serviceId = serviceId;
     }
 
     public Contract(int id, String startDate, String endDate,

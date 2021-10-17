@@ -23,13 +23,15 @@
         <h1>Customer Management</h1>
     </div>
 </div>
-
+<h4>
+    <a href="/customer?action=create">Create Customer</a>
+</h4>
 <h4>
     <a href="/customer?action=search">Search Customer</a>
 </h4>
 
 <h4>
-    <a href="/home/home.jsp">Back home</a>
+    <a href="/">Back home</a>
 </h4>
 
 <table class="table table-striped" id="tableCustomer" >
@@ -87,18 +89,5 @@
 <script src="/static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 <script src="/static/datatables/js/jquery.dataTables.min.js"></script>
 <script src="/static/datatables/js/dataTables.bootstrap4.min.js"></script>
-
-<script>
-    function onDelete(idContract) {
-        document.getElementById("idContractDel").value = idContract;
-    }
-    $(document).ready(function () {
-        $("#tableCustomer").DataTable ({
-            "dom": 'lrtip',
-            "lengthChange": false,
-            "pageLength": 4
-        })
-    })
-</script>
 </body>
 </html>

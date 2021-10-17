@@ -22,11 +22,11 @@
 <center>
     <h1 class="text-danger">Create Customer</h1>
 </center>
-<h2>
-    <a href="customer"><i class="fas fa-arrow-left"></i> Back to Customer Page</a>
+<h2 style="text-align: center">
+    <a href="/customer"> Back to Customer Page</a>
 </h2>
-<h2>
-    <a href="/"><i class="fas fa-arrow-left"></i> Back to Home</a>
+<h2 style="text-align: center">
+    <a href="/"> Back to Home</a>
 </h2>
 <p class="text-center">
     <c:if test='${requestScope["message"] != null}'>
