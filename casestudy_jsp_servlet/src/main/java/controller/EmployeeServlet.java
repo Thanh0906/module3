@@ -97,14 +97,14 @@ public class EmployeeServlet extends HttpServlet {
         Employee employee = new Employee(name, birthday, idCard, salary, phone, email, address, positionId, educationDegreeId, divisionId, username);
         employeeService.insertEmployee(employee);
         request.setAttribute("message", "Create successful");
-        request.getRequestDispatcher("employee/create.jsp").forward(request, response);
+        request.getRequestDispatcher("employee/list.jsp").forward(request, response);
     }
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {
         int id = Integer.parseInt(request.getParameter("id"));
         Employee employee = employeeService.showEmployeeId(id);
         request.setAttribute("employee", employee);
-        request.getRequestDispatcher("/employee/edit.jsp").forward(request, response);
+        request.getRequestDispatcher("/employee/create.jsp").forward(request, response);
     }
 
     private void editEmployee(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {

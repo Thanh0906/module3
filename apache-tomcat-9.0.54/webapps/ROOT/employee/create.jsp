@@ -5,7 +5,7 @@
   Time: 4:45 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html>
@@ -86,16 +86,18 @@
             </tr>
             <tr>
                 <th>position id:</th>
+                <td>
+                    <select class="form-select" aria-label="Default select example" name="position_id">
+                        <option selected>Chọn vị trí</option>
+                        <option value="1">Lễ tân</option>
+                        <option value="2">Phục vụ</option>
+                        <option value="3">Chuyên viên</option>
+                        <option value="4">Giám sát</option>
+                        <option value="5">Quản lý</option>
+                        <option value="6">Giám đốc</option>
+                    </select>
+                </td>
 
-                <select class="form-select" aria-label="Default select example" name="position_id">
-                    <option selected>Chọn vị trí</option>
-                    <option value="1">Lễ tân</option>
-                    <option value="2">Phục vụ</option>
-                    <option value="3">Chuyên viên</option>
-                    <option value="4">Giám sát</option>
-                    <option value="5">Quản lý</option>
-                    <option value="6">Giám đốc</option>
-                </select>
             </tr>
             <tr>
                 <th>education_degree_id:</th>
@@ -110,13 +112,13 @@
             </tr>
             <tr>
                 <th>division_id:</th>
-               <td> <select class="form-select" aria-label="Default select example" name="division_id">
-                   <option selected>Chọn bộ phận</option>
-                   <option value="1">Sale - Marketing</option>
-                   <option value="2">Hành chính</option>
-                   <option value="3">Phục vụ</option>
-                   <option value="4">Quản lý</option>
-               </select></td>
+                <td><select class="form-select" aria-label="Default select example" name="division_id">
+                    <option selected>Chọn bộ phận</option>
+                    <option value="1">Sale - Marketing</option>
+                    <option value="2">Hành chính</option>
+                    <option value="3">Phục vụ</option>
+                    <option value="4">Quản lý</option>
+                </select></td>
             </tr>
             <tr>
                 <th>UseName:</th>
@@ -127,7 +129,7 @@
 
             <tr>
                 <td colspan="2" align="center">
-                    <input class="bg-success" type="submit" name="action" value="Create"/>
+                    <input  type="submit" name="action" value="Create"/>
                 </td>
             </tr>
         </table>
@@ -139,12 +141,9 @@
 <script src="/static/jquery/jquery-3.5.1.min.js"></script>
 <script src="/static/js/popper.min.js"></script>
 <script src="/static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-
 <script src="/static/datatables/js/jquery.dataTables.min.js"></script>
 <script src="/static/datatables/js/dataTables.bootstrap4.min.js"></script>
-
 <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
-
 
 
 </body>

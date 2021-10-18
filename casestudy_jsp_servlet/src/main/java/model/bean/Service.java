@@ -13,6 +13,9 @@ public class Service {
     private double poolArea;
     private int numberOfFloors;
 
+    public Service() {
+    }
+
     public Service(String name, int area, double cost, int maxPeople, int rentTypeId, int serviceTypeId,
                    String standardRoom, String descriptionOtherConvenience, double poolArea,
                    int numberOfFloors) {

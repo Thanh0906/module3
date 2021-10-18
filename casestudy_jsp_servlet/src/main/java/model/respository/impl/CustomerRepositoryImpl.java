@@ -172,17 +172,16 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
     }
 
     @Override
-    public boolean deleteCustomer(int id) throws SQLException {
+    public void deleteCustomer(int id) throws SQLException {
         Connection connection = DBConnection.getConnection();
         PreparedStatement preparedStatement = null;
-        boolean rowDeleted;
+
 
         if (connection != null) {
             try {
                 preparedStatement = connection.prepareStatement(DELETE_CUSTOMER);
                 preparedStatement.setInt(1, id);
-                rowDeleted = preparedStatement.executeUpdate() > 0;
-                return rowDeleted;
+              preparedStatement.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
             } finally {
@@ -194,7 +193,6 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
                 DBConnection.close();
             }
         }
-        return false;
     }
 
     @Override

@@ -30,8 +30,8 @@ public class CustomerServiceImpl implements ICustomerService {
     }
 
     @Override
-    public boolean deleteCustomer(int id) throws SQLException {
-        return customerRepository.deleteCustomer(id);
+    public void deleteCustomer(int id) throws SQLException {
+         customerRepository.deleteCustomer(id);
     }
 
     @Override

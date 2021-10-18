@@ -32,112 +32,85 @@
         <span class="message">${requestScope["message"]}</span>
     </c:if>
 </h4>
-<form method="post">
-    <legend>Service information</legend>
-    <div class="row mt-2">
-        <div class="col-5">
-            <div class="row mt-2">
-                <div class="col-4">
-                    <label class="col-form-label">Name</label>
-                </div>
-                <div class="col-8">
-                    <input type="text" class="form-control" name="name">
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-4">
-                    <label class="col-form-label">Area</label>
-                </div>
-                <div class="col-8">
-                    <input type="text" class="form-control" name="area">
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-4">
-                    <label class="col-form-label">Cost</label>
-                </div>
-                <div class="col-8">
-                    <input type="text" class="form-control" name="cost">
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-4">
-                    <label class="col-form-label">Max people</label>
-                </div>
-                <div class="col-8">
-                    <input type="text" class="form-control" name="service_max_people">
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-4">
-                    <label class="col-form-label">Rent type</label>
-                </div>
-                <div class="col-8">
-                    <select class="form-select" aria-label="Default select example" name="rent_type">
-                        <option selected>Chọn kiểu thuê</option>
-                        <option value="1">Năm</option>
-                        <option value="2">Tháng</option>
-                        <option value="3">Ngày</option>
-                        <option value="4">Giờ</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-4">
-                    <label class="col-form-label">Service type</label>
-                </div>
-                <div class="col-8">
-                    <select class="form-select" aria-label="Default select example" name="service_type">
-                        <option selected>Chọn loại dịch vụ</option>
-                        <option value="1">Villa</option>
-                        <option value="2">House</option>
-                        <option value="3">Room</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-4">
-                    <label class="col-form-label">Standard room</label>
-                </div>
-                <div class="col-8">
-                    <input type="text" class="form-control" name="standard_room">
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-4">
-                    <label class="col-form-label">Description other convenience</label>
-                </div>
-                <div class="col-8">
-                    <input type="text" class="form-control" name="description_other_convenience">
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-4">
-                    <label class="col-form-label">Pool area</label>
-                </div>
-                <div class="col-8">
-                    <input type="text" class="form-control" name="pool_area">
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-4">
-                    <label class="col-form-label">Number of floors</label>
-                </div>
-                <div class="col-8">
-                    <input type="text" class="form-control" name="number_of_floors">
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-4">
-                </div>
-                <div class="col-6">
-                    <input type="submit" class="form-control" value="Create new service">
-                </div>
-                <div class="col-2">
-                </div>
-            </div>
-        </div>
-    </div>
+<div align="center"></div>
+<form action="/employee?action=create" method="post"></from>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th> Name:</th>
+            <td>
+                <input type="text" name="name"  size="45"/>
+            </td>
+        </tr>
+        <tr>
+            <th>Area</th>
+            <td>
+                <input type="text" name="area"  size="45"/>
+            </td>
+        </tr>
+        <tr>
+            <th>cost:</th>
+            <td>
+                <input type="text" name="cost"  size="45"/>
+            </td>
+        </tr>
+        <tr>
+            <th>Max People:</th>
+            <td>
+                <input type="text" name="service_max_people"  size="45"/>
+            </td>
+        </tr>
+        <tr>
+            <th>Rent Type:</th>
+            <td>
+            <select class="form-select" aria-label="Default select example" name="rent_type">
+                <option selected>Chọn kiểu thuê</option>
+                <option value="1">Năm</option>
+                <option value="2">Tháng</option>
+                <option value="3">Ngày</option>
+                <option value="4">Giờ</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Service Type:</th>
+            <td>
+                <select class="form-select" aria-label="Default select example" name="service_type">
+                    <option selected>Chọn loại dịch vụ</option>
+                    <option value="1">Villa</option>
+                    <option value="2">House</option>
+                    <option value="3">Room</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th> Standard Room:</th>
+            <td>
+                <input type="text" name=" standard_room"  size="45"/>
+            </td>
+        </tr>
+        <tr>
+            <th>description_other_convenience:</th>
+            <td><input type="text" name="description_other_convenience"  size="45"/></td>
+        </tr>
+        <tr>
+            <th>Pool Area:</th>
+            <td>
+                <input type="text" name="pool_area"  size="45"/>
+            </td>
+        </tr>
+        <tr>
+            <th>Number Floor:</th>
+            <td>
+                <input type="text" name="number_of_floors"  size="45"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+                <input  type="submit" name="action" value="Create"/>
+            </td>
+        </tr>
+    </table>
 </form>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"

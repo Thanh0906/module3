@@ -12,17 +12,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeRepositoryImpl implements IEmployeeRepository {
-    private static final String SELECT_ALL_EMPLOYEES = "SELECT * FROM employee";
-    private static final String SELECT_EMPLOYEE_BY_ID = "SELECT * FROM employee WHERE employee_id = ?";
-    private static final String INSERT_EMPLOYEE_SQL = "INSERT INTO employee (employee_name, employee_birthday, " +
+    private static final String SHOW_ALL_EMPLOYEES = "SELECT * FROM employee";
+    private static final String SHOW_EMPLOYEE_BY_ID = "SELECT * FROM employee WHERE employee_id = ?";
+    private static final String INSERT_EMPLOYEE = "INSERT INTO employee (employee_name, employee_birthday, " +
             "employee_id_card, employee_salary, employee_phone, employee_email, employee_address, position_id, " +
             "education_degree_id, division_id, username) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-    private static final String UPDATE_EMPLOYEE_SQL = "UPDATE employee SET employee_name = ?, employee_birthday = ?, " +
+    private static final String UPDATE_EMPLOYEE = "UPDATE employee SET employee_name = ?, employee_birthday = ?, " +
             "employee_id_card = ?, employee_salary = ?, employee_phone = ?, employee_email = ?, employee_address = ?, " +
             "position_id = ?, education_degree_id = ?, division_id = ?, username = ? WHERE employee_id = ?;";
-    private static final String DELETE_EMPLOYEE_SQL = "DELETE FROM employee WHERE employee_id = ?; ";
+    private static final String DELETE_EMPLOYEE = "DELETE FROM employee WHERE employee_id = ?; ";
     private static final String SELECT_EMPLOYEE_BY_NAME = "SELECT * FROM employee WHERE substring_index(employee_name,' ', -1) LIKE ?;";
-    private static final String SELECT_EMPLOYEE_BY_PHONE = "SELECT * FROM employee WHERE employee_phone LIKE ?;";
+
 
     public EmployeeRepositoryImpl() {
     }
@@ -36,7 +36,7 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
 
         if (connection != null) {
             try {
-                preparedStatement = connection.prepareStatement(SELECT_EMPLOYEE_BY_ID);
+                preparedStatement = connection.prepareStatement(SHOW_EMPLOYEE_BY_ID);
                 preparedStatement.setInt(1, id);
                 resultSet = preparedStatement.executeQuery();
                 while (resultSet.next()) {
@@ -77,7 +77,7 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
 
         if (connection != null) {
             try {
-                preparedStatement = connection.prepareStatement(SELECT_ALL_EMPLOYEES);
+                preparedStatement = connection.prepareStatement(SHOW_ALL_EMPLOYEES);
                 resultSet = preparedStatement.executeQuery();
                 Employee employee = null;
                 while (resultSet.next()) {
@@ -118,7 +118,7 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
 
         if (connection != null) {
             try {
-                preparedStatement = connection.prepareStatement(INSERT_EMPLOYEE_SQL);
+                preparedStatement = connection.prepareStatement(INSERT_EMPLOYEE);
                 preparedStatement.setString(1, employee.getName());
                 preparedStatement.setString(2,employee.getBirthday());
                 preparedStatement.setString(3, employee.getIdCard());
@@ -152,7 +152,7 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
 
         if (connection != null) {
             try {
-                preparedStatement = connection.prepareStatement(UPDATE_EMPLOYEE_SQL);
+                preparedStatement = connection.prepareStatement(UPDATE_EMPLOYEE);
                 preparedStatement.setString(1, employee.getName());
                 preparedStatement.setString(2,employee.getBirthday());
                 preparedStatement.setString(3, employee.getIdCard());
@@ -189,7 +189,7 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
 
         if (connection != null) {
             try {
-                preparedStatement = connection.prepareStatement(DELETE_EMPLOYEE_SQL);
+                preparedStatement = connection.prepareStatement(DELETE_EMPLOYEE);
                 preparedStatement.setInt(1, id);
                 resultSet = preparedStatement.executeUpdate();
             } catch (SQLException e) {

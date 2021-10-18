@@ -9,7 +9,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>Create Customer</title>
+    <title>Create Contract</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,7 +20,7 @@
 </head>
 <body>
 <center>
-    <h1 class="text-danger">Create Customer</h1>
+    <h1 class="text-danger">Create Contract</h1>
 </center>
 <h2 style="text-align: center">
     <a href="/contract"></i> Back to Contract Page</a>

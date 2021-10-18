@@ -2,12 +2,12 @@ package model.bean;
 
 public class Division {
     private int id;
-    private int name;
+    private String name;
 
     public Division() {
     }
 
-    public Division(int id, int name) {
+    public Division(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -20,11 +20,11 @@ public class Division {
         this.id = id;
     }
 
-    public int getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 }

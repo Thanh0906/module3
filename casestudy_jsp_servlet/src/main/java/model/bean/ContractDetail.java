@@ -8,7 +8,12 @@ public class ContractDetail {
 
     public ContractDetail() {
     }
-
+    public ContractDetail(int contractId, int attachServiceId, int quantity) {
+        super();
+        this.contractId = contractId;
+        this.attachServiceId = attachServiceId;
+        this.quantity = quantity;
+    }
     public ContractDetail(int id, int contractId, int attachServiceId, int quantity) {
         this.id = id;
         this.contractId = contractId;

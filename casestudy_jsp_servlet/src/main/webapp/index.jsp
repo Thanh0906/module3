@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Home</title>
+    <title>HomePage</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <%--    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">--%>
@@ -60,7 +60,7 @@
                     <a class="nav-link" href="/contract?action=contract">Contract</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/contract_detail?action=contract_detailt">Contract Detail</a>
+                    <a class="nav-link" href="/contract_detail?action=contract_detail">Contract Detail</a>
                 </li>
             </ul>
 
